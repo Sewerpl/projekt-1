@@ -40,6 +40,32 @@ public:
             tail = newNode;
         }
     }
+     // dodaje element pod indeks, który wskazałem
+    void addAtIndex(int val, int index) {
+        if (index == 0) {
+            addAtStart(val);
+            return;
+        }
+
+        Node* temp = head;
+        int count = 0;
+
+        while (temp != nullptr && count < index) {
+            temp = temp->next;
+            count++;
+        }
+
+        if (temp == nullptr) {
+            addAtEnd(val);
+        } else {
+            Node* newNode = new Node(val);
+            newNode->prev = temp->prev;
+            newNode->next = temp;
+            temp->prev->next = newNode;
+            temp->prev = newNode;
+        }
+    }
+
 
 
 
