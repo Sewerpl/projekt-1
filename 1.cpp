@@ -29,6 +29,19 @@ public:
         }
     }
 
+        // dodaje element na koniec listy
+    void addAtEnd(int val) {
+        Node* newNode = new Node(val);
+        if (tail == nullptr) {
+            head = tail = newNode;
+        } else {
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
+        }
+    }
+
+
 
  
     return 0;
