@@ -17,6 +17,19 @@ private:
 public:
     DoublyLinkedList() : head(nullptr), tail(nullptr) {}
 
+       // dodaje element do listy
+    void addAtStart(int val) {
+        Node* newNode = new Node(val);
+        if (head == nullptr) {
+            head = tail = newNode;
+        } else {
+            newNode->next = head;
+            head->prev = newNode;
+            head = newNode;
+        }
+    }
+
+
  
     return 0;
 }
