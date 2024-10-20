@@ -117,6 +117,16 @@ public:
         }
     }
 
+        // wyświetlam całą listę
+    void display() {
+        Node* temp = head;
+        while (temp != nullptr) {
+            std::cout << temp->data << " ";
+            temp = temp->next;
+        }
+        std::cout << std::endl;
+    }
+
 
 
 
