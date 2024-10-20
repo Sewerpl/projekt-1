@@ -91,6 +91,32 @@ public:
         delete temp;
     }
 
+// usuwam element ze wskazanym indeksem
+    void removeAtIndex(int index) {
+        if (index == 0) {
+            removeFromStart();
+            return;
+        }
+
+        Node* temp = head;
+        int count = 0;
+
+        while (temp != nullptr && count < index) {
+            temp = temp->next;
+            count++;
+        }
+
+        if (temp == nullptr) return;
+
+        if (temp == tail) {
+            removeFromEnd();
+        } else {
+            temp->prev->next = temp->next;
+            temp->next->prev = temp->prev;
+            delete temp;
+        }
+    }
+
 
 
 
