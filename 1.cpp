@@ -182,6 +182,41 @@ public:
     }
 };
 
+  // main testuje klasy
+int main() {
+    DoublyLinkedList list;
+
+    list.addAtStart(10);
+    list.addAtStart(5);
+    list.addAtEnd(20);
+    list.addAtEnd(30);
+    list.addAtIndex(15, 2);
+
+    std::cout << "Lista po dodaniu elementów: ";
+    list.display();
+
+    std::cout << "Lista w odwrotnej kolejności: ";
+    list.displayReverse();
+
+    list.removeFromStart();
+    std::cout << "Lista po usunięciu elementu z początku: ";
+    list.display();
+
+    list.removeFromEnd();
+    std::cout << "Lista po usunięciu elementu z końca: ";
+    list.display();
+
+    list.removeAtIndex(1);
+    std::cout << "Lista po usunięciu elementu pod indeksem 1: ";
+    list.display();
+
+    list.displayNext(0); // wyświetla nastepny element dla indeksu 0
+    list.displayPrev(1); // wyświetla poprzedni element dla indeksu 1
+
+    list.clear();
+    std::cout << "Lista po wyczyszczeniu: ";
+    list.display();
+
 
 
 
