@@ -127,6 +127,16 @@ public:
         std::cout << std::endl;
     }
 
+    // wyświetylam listę w odwrotnej kolejności
+    void displayReverse() {
+        Node* temp = tail;
+        while (temp != nullptr) {
+            std::cout << temp->data << " ";
+            temp = temp->prev;
+        }
+        std::cout << std::endl;
+    }
+
 
 
 
