@@ -127,7 +127,7 @@ public:
         std::cout << std::endl;
     }
 
-    // wyświetylam listę w odwrotnej kolejności
+    // wyświetylam listę w odwrotnej kolejności 1
     void displayReverse() {
         Node* temp = tail;
         while (temp != nullptr) {
