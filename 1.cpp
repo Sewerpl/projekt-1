@@ -153,6 +153,22 @@ public:
         }
     }
 
+    // wyswietlam poprzedni element od zadanego indeksu
+    void displayPrev(int index) {
+        Node* temp = head;
+        int count = 0;
+        while (temp != nullptr && count < index) {
+            temp = temp->next;
+            count++;
+        }
+
+        if (temp != nullptr && temp->prev != nullptr) {
+            std::cout << "Poprzedni element: " << temp->prev->data << std::endl;
+        } else {
+            std::cout << "Brak poprzedniego elementu." << std::endl;
+        }
+    }
+
 
 
 
