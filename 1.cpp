@@ -65,6 +65,18 @@ public:
             temp->prev = newNode;
         }
     }
+     // usuwam element z początku listy
+    void removeFromStart() {
+        if (head == nullptr) return;
+        Node* temp = head;
+        if (head == tail) {
+            head = tail = nullptr;
+        } else {
+            head = head->next;
+            head->prev = nullptr;
+        }
+        delete temp;
+    }
 
 
 
