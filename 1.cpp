@@ -168,6 +168,19 @@ public:
             std::cout << "Brak poprzedniego elementu." << std::endl;
         }
     }
+    
+     // czyszcze całą liste
+    
+    void clear() {
+        while (head != nullptr) {
+            removeFromStart();
+        }
+    }
+
+    ~DoublyLinkedList() {
+        clear();
+    }
+};
 
 
 
