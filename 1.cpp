@@ -78,6 +78,19 @@ public:
         delete temp;
     }
 
+      // usuwam element z końca listy
+    void removeFromEnd() {
+        if (tail == nullptr) return;
+        Node* temp = tail;
+        if (head == tail) {
+            head = tail = nullptr;
+        } else {
+            tail = tail->prev;
+            tail->next = nullptr;
+        }
+        delete temp;
+    }
+
 
 
 
