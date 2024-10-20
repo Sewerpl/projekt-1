@@ -136,6 +136,22 @@ public:
         }
         std::cout << std::endl;
     }
+   
+    // wyświetlam nastepny element od zadanego indeksu
+    void displayNext(int index) {
+        Node* temp = head;
+        int count = 0;
+        while (temp != nullptr && count < index) {
+            temp = temp->next;
+            count++;
+        }
+
+        if (temp != nullptr && temp->next != nullptr) {
+            std::cout << "Następny element: " << temp->next->data << std::endl;
+        } else {
+            std::cout << "Brak następnego elementu." << std::endl;
+        }
+    }
 
 
 
